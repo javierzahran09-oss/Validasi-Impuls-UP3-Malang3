@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Validasi Impuls</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Validasi Impuls UP3 Malang</h2>
+
+<div class="box input">
+<h3>INPUT</h3>
+
+<label>Arus (A)</label>
+<input id="arus" type="number" inputmode="decimal" step="0.01">
+
+<label>Putaran / Impuls</label>
+<input id="impuls" type="number" inputmode="decimal">
+
+<label>Konstanta kWh Meter</label>
+<input id="konstanta" type="number" inputmode="decimal" step="0.01">
+
+<label>Tegangan (Volt)</label>
+<input id="tegangan" type="number" inputmode="decimal" value="220">
+
+<label>Cos φ</label>
+<input id="cosphi" type="number" inputmode="decimal" value="0.95" step="0.01">
+
+<label>Waktu Manual (detik)</label>
+<input id="waktuManual" type="number" inputmode="decimal">
+
+<button onclick="hitungImpuls()">Hitung</button>
+<button onclick="resetImpuls()" class="btn-reset">Reset</button>
+</div>
+
+<div class="box output">
+<h3>OUTPUT</h3>
+
+<p>kWh: <span id="kwh"></span></p>
+<p>Waktu (detik): <span id="waktu"></span></p>
+<p>Toleransi MIN (detik): <span id="tMin"></span></p>
+<p>Toleransi MAX (detik): <span id="tMax"></span></p>
+<p>Deviasi Waktu (%): <span id="deviasi"></span></p>
+
+<p class="catatan-deviasi">
+  Deviasi -10% sampai -99%
+</p>
+
+</div>
+
+<!-- ===== VALIDASI kWh (BARU) ===== -->
+<div class="box input">
+  <h3>Validasi kWh</h3>
+
+  <label>Konstanta Meter</label>
+  <input id="konstanta2" type="number" inputmode="decimal" step="0.01">
+
+  <label>Putaran / Impuls</label>
+  <input id="impuls2" type="number" inputmode="decimal">
+
+  <label>Waktu (detik)</label>
+  <input id="waktu2" type="number" inputmode="decimal">
+
+  <label>kWh P2</label>
+  <input id="kwhP2_val" type="number" inputmode="decimal" step="0.01">
+
+  <button onclick="hitungKwh()">Hitung</button>
+  <button onclick="resetKwh()" class="btn-reset">Reset</button>
+</div>
+
+<div class="box output">
+  <h3>Hasil Validasi kWh</h3>
+
+  <p>kWh P1: <span id="kwhP1"></span></p>
+  <p>kWh P2: <span id="kwhP2"></span></p>
+  <p>Deviasi (%): <span id="deviasiKwh"></span></p>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

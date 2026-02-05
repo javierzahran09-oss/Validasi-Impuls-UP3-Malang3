@@ -1,0 +1,117 @@
+/* ========== RESET & FONT ========== */
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ========== BODY ========== */
+body {
+  margin: 0;
+  padding: 12px;
+  background: #f2f4f7;
+}
+
+/* ========== JUDUL ========== */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin: 8px 0 12px 0;
+}
+
+/* ========== KOTAK INPUT & OUTPUT ========== */
+.box {
+  padding: 16px;            /* lebih lega */
+  border-radius: 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}
+
+/* Warna seperti Validasi TM */
+.input {
+  background: #e6ffe6; /* Hijau */
+}
+
+.output {
+  background: #e6f0ff; /* Biru */
+}
+
+/* ========== LABEL (DI TENGAH & BESAR) ========== */
+label {
+  display: block;
+  text-align: center;
+  font-size: 19px;      /* BESAR */
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+/* ========== INPUT (SUPER RAMAH JARI) ========== */
+input {
+  width: 100%;
+  padding: 16px;        /* TINGGI & NYAMAN */
+  font-size: 19px;      /* BESAR */
+  border-radius: 14px;
+  border: 1.5px solid #aaa;
+  text-align: left;
+}
+
+/* ========== OUTPUT (TIDAK RATA KANAN, BESAR) ========== */
+.output p {
+  display: block;
+  text-align: left;
+  font-size: 19px;
+  margin: 10px 0;
+}
+
+/* Angka output lebih tebal */
+.output span {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+/* ========== TOMBOL (UKURAN APLIKASI HP) ========== */
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;        /* TINGGI */
+  font-size: 21px;      /* BESAR */
+  font-weight: bold;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 14px;
+}
+
+/* Tombol Reset */
+.btn-reset {
+  background: #dc3545;
+}
+
+/* Efek tekan */
+button:active {
+  transform: scale(0.99);
+}
+
+/* ========== KHUSUS LAYAR HP KECIL (TETAP BESAR) ========== */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  label, input, .output p, .output span {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+}
+/* ===== TULISAN CATATAN DI KOTAK HIJAU ===== */
+.catatan-deviasi {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a5c0a; /* hijau gelap biar terlihat profesional */
+}
+
